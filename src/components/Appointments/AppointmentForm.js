@@ -14,7 +14,7 @@ export class AppointmentForm extends React.Component {
             ...data,
             date: dateFns.format(this.props.date, 'MM/DD/YYYY')
         }
-        postAppointments(newData).then(() => {this.props.resetForm()});
+        postAppointments(newData);
 
     }
 
@@ -23,7 +23,7 @@ export class AppointmentForm extends React.Component {
     }
 
     render() {
-
+        const { resetForm } = this.props;
         const possible_massages = ['Standard Massage', 'Therapeutic Massage', 'Somatic Coaching'];
         const length_of_time = ['30', '60', '75', '90'];
         const add_ons = ["Hot Stone Massage", "JoJo Acupressure Facial", "Craniosacral Therapy", "Rosehip Acupressure Facial", "Reflexology Foot Treatment", "Sauna"];
@@ -78,7 +78,7 @@ export class AppointmentForm extends React.Component {
         return (
             <div className='input'>
                 <form onSubmit={this.props.handleSubmit(data => {
-                    this.handleSubmit(data)
+                    this.handleSubmit(data).then(() => {resetForm()})
                 })}>
                     <h2>Booking Details</h2>
                     <div>
