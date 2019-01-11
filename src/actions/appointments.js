@@ -1,5 +1,6 @@
 import { API_BASE_URL } from '../config';
 import { SubmissionError } from 'redux-form';
+import {reset} from 'redux-form';
 
 export const FETCH_APPOINTMENTS_BEGIN = 'FETCH_APPOINTMENTS_BEGIN';
 export const FETCH_APPOINTMENTS_SUCCESS = 'FETCH_APPOINTMENTS_SUCCESS';
@@ -113,6 +114,7 @@ export const postAppointments = (values) => {
             return;
         })
         .then(() => console.log('Submitted with values', values))
+        .then(() => dispatch(reset('appointmentForm')))
         .catch(err => {
             const { reason, message, location } = err;
             if (reason === 'ValidationError') {
