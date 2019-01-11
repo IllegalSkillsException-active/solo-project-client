@@ -79,7 +79,7 @@ export class AppointmentForm extends React.Component {
                 <form onSubmit={this.props.handleSubmit(data => {
                     this.handleSubmit(data)
                 })}>
-                    <h2>Booking Details!!!</h2>
+                    <h2>Booking Details</h2>
                     <div>
                         <label>Appointment Date</label>
                     </div>
