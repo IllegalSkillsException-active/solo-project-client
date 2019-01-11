@@ -74,7 +74,7 @@ function handleErrors(response) {
 export const fetchAppointments = () => {
     return (dispatch) => {
         dispatch(fetchAppointmentsBegin());
-        return fetch(`${API_BASE_URL}/api/appointments`)
+        return fetch(`${API_BASE_URL}api/appointments`)
             .then(handleErrors)
             .then(res => res.json())
             .then(appointments => {
@@ -85,7 +85,7 @@ export const fetchAppointments = () => {
 };
 
 export const postAppointments = (values) => {
-    return fetch(`${API_BASE_URL}/api/appointments`, {
+    return fetch(`${API_BASE_URL}api/appointments`, {
         method: 'POST',
         body: JSON.stringify(values),
         headers: {
