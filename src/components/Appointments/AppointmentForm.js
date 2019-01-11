@@ -14,8 +14,7 @@ export class AppointmentForm extends React.Component {
             ...data,
             date: dateFns.format(this.props.date, 'MM/DD/YYYY')
         }
-        postAppointments(newData);
-
+        postAppointments(newData).then(()=>this.props.reset('appointmentForm'));
     }
 
     handleCalendarToggle(visibility) {
@@ -23,16 +22,16 @@ export class AppointmentForm extends React.Component {
     }
 
     render() {
-        const { resetForm } = this.props;
+      
         const possible_massages = ['Standard Massage', 'Therapeutic Massage', 'Somatic Coaching'];
         const length_of_time = ['30', '60', '75', '90'];
         const add_ons = ["Hot Stone Massage", "JoJo Acupressure Facial", "Craniosacral Therapy", "Rosehip Acupressure Facial", "Reflexology Foot Treatment", "Sauna"];
 
         const addOnOptions = add_ons.map((addOn, index) => {
             return (
-                <div>
+                <div key={index}>
                     <label>{addOn}</label>
-                    <li><Field key={index} name={addOn} component="input" type="checkbox" /></li>
+                    <li><Field name={addOn} component="input" type="checkbox" /></li>
                 </div>);
         });
 
@@ -70,18 +69,17 @@ export class AppointmentForm extends React.Component {
         });
 
         const renderSelectedDate = () => {
-            return <input value={dateFns.format(this.props.date, 'MM/DD/YYYY')} type="text" onClick={() => {
+            return <input disabled={true} value={dateFns.format(this.props.date, 'MM/DD/YYYY')} type="text" onClick={() => {
                 this.handleCalendarToggle();
             }} />
         }
-
+        console.log(this.props); 
         return (
             <div className='input'>
                 <form onSubmit={this.props.handleSubmit(data => {
                     this.handleSubmit(data)
-                    resetForm();
                 })}>
-                    <h2>Booking Details</h2>
+                    <h2>Booking Details!!!</h2>
                     <div>
                         <label>Appointment Date</label>
                     </div>
