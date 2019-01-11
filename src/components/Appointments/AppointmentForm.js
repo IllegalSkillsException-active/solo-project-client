@@ -14,7 +14,8 @@ export class AppointmentForm extends React.Component {
             ...data,
             date: dateFns.format(this.props.date, 'MM/DD/YYYY')
         }
-        postAppointments(newData);
+        postAppointments(newData).then(() => {this.props.resetForm()});
+
     }
 
     handleCalendarToggle(visibility) {

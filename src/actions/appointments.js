@@ -114,7 +114,6 @@ export const postAppointments = (values) => {
             return;
         })
         .then(() => console.log('Submitted with values', values))
-        .then(() => dispatch(reset('appointmentForm')))
         .catch(err => {
             const { reason, message, location } = err;
             if (reason === 'ValidationError') {
