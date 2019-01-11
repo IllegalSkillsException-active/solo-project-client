@@ -1,0 +1,12 @@
+.offerings {
+    text-align: center;
+    font-size:6em;
+    margin:0 auto;
+}
+
+.pricing {
+	max-width: 37.5em;
+	margin: 0 auto;
+	margin-top: 0;
+	line-height: 1.5em;
+}

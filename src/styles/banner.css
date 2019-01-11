@@ -1,0 +1,77 @@
+
+/* html{
+    background-image: url('./img/Nettle\ &\ Sage.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: scroll; 
+}
+Link{
+    position:fixed; 
+}
+img{
+    height: 100%; 
+    width: 100%; 
+}
+#slider {
+    width: 1000px;
+    height: 300px;
+    overflow: hidden;
+    border: 1px solid #c69;
+  }
+  
+  .slide {
+    width: 1000px;
+    height: 300px;
+    float: left;
+    position: relative;
+  }
+  
+  #slide-holder {
+    width: 400%;
+    position: relative;
+    left: 0;
+    -webkit-animation: scroller 20s infinite;
+            animation: scroller 20s infinite;
+  }
+  
+  @-webkit-keyframes scroller {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    33% {
+      -webkit-transform: translateX(-1000px);
+              transform: translateX(-1000px);
+    }
+    66% {
+      -webkit-transform: translateX(-2000px);
+              transform: translateX(-2000px);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+  
+  @keyframes scroller {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    33% {
+      -webkit-transform: translateX(-1000px);
+              transform: translateX(-1000px);
+    }
+    66% {
+      -webkit-transform: translateX(-2000px);
+              transform: translateX(-2000px);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+  #slider {
+    margin: 0 auto;
+  }
+   */

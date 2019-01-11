@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two');
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .appointmentButton {
+        background-image: url('./img/logo5.jpg'); 
+        position: absolute;
+        background-size:100% 100%;
+        background-position: center;
+        background-repeat:no-repeat; 
+        top:105%;
+        right: 70%; 
+        width: 20%; 
+        height: 15%;
+        text-align: center;
+        font-size: 1.2em;
+    
+    }
+    
+    a .appointmentButton  {
+        color: #643717 ;
+        font-family: 'Lobster Two', cursive;
+        font-weight: 100;
+        
+      }
+
+    .appointmentText {
+        top:1em; 
+        position: relative;
+        left:7em;
+    }
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width : 768px){
+    .appointmentButton {
+        background-image: url('./img/logo5.jpg'); 
+        position: absolute;
+        background-size:100% 100%;
+        background-position: center;
+        background-repeat:no-repeat; 
+        top:105%;
+        right: 60%; 
+        width: 20%; 
+        height: 15%;
+        text-align: center;
+        font-size: 1.2em;
+    
+    }
+    
+    a .appointmentButton  {
+        color: #643717 ;
+        font-family: 'Lobster Two', cursive;
+        font-weight: 100;
+        
+      }
+
+    .appointmentText{
+        top:1em; 
+        position: relative;
+        left:8em;
+    }
+}
+
+@media only screen  and (min-width : 1024px) {
+    .canyon {
+        background-image:url('./img/red-rocks.jpg'); 
+        position: absolute;
+        width: 25%; 
+        height: 100%; 
+        background-repeat:no-repeat; 
+        background-size: cover;
+    }
+    
+    .appointmentButton {
+        background-image: url('./img/logo5.jpg'); 
+        position: absolute;
+        background-size:100% 100%;
+        background-position: center;
+        background-repeat:no-repeat; 
+        top:95%;
+        left: 55%; 
+        width: 20%; 
+        height: 20%;
+        text-align: center;
+        font-size: 1.4em;
+    
+    }
+    
+    a .appointmentButton  {
+        color: #643717 ;
+        font-family: 'Lobster Two', cursive;
+        font-weight: 100;
+        
+      }
+
+    .appointmentText {
+        top:2em; 
+        position: relative;
+        left:8em;
+    }
+}
+
+@media only screen  and (min-width : 1440px) {
+    .canyon {
+        background-image:url('./img/red-rocks.jpg'); 
+        position: absolute;
+        width: 25%; 
+        height: 100%; 
+        background-repeat:no-repeat; 
+        background-size: cover;
+    }
+    
+    .appointmentButton {
+        background-image: url('./img/logo5.jpg'); 
+        position: absolute;
+        background-size:100% 100%;
+        background-position: center;
+        background-repeat:no-repeat; 
+        top:90%;
+        left: 55%; 
+        width: 20%; 
+        height: 25%;
+        text-align: center;
+        font-size: 1.4em;
+    
+    }
+    
+    a .appointmentButton  {
+        color: #643717 ;
+        font-family: 'Lobster Two', cursive;
+        font-weight: 100;
+        
+      }
+
+    .appointmentText {
+        top:2em; 
+        position: relative;
+        left:12em;
+    }
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+    .canyon {
+        background-image:url('./img/red-rocks.jpg'); 
+        position: absolute;
+        width: 25%; 
+        height: 70%; 
+        background-repeat:no-repeat; 
+        background-size: cover;
+    }
+    
+    .appointmentButton {
+        background-image: url('./img/logo5.jpg'); 
+        position: absolute;
+        background-size:100% 100%;
+        background-position: center;
+        background-repeat:no-repeat; 
+        top:70%;
+        left: 60%; 
+        width: 15%; 
+        height: 25%;
+        text-align: center;
+        font-size: 2.5em;
+    
+    }
+    
+    a .appointmentButton  {
+        color: #643717 ;
+        font-family: 'Lobster Two', cursive;
+        font-weight: 100;
+        
+      }
+    .appointmentText {
+        top:.5em; 
+        left:6em;
+        position: relative;
+        
+    }
+}
+
+.footer {
+	text-align: center;
+}
+
+.about,
+.questions {
+	max-width: 37.5em;
+	margin: 0 auto;
+	margin-top: 0;
+	line-height: 1.5em;
+}
