@@ -78,7 +78,8 @@ export class AppointmentForm extends React.Component {
         return (
             <div className='input'>
                 <form onSubmit={this.props.handleSubmit(data => {
-                    this.handleSubmit(data).then(() => {resetForm()})
+                    this.handleSubmit(data)
+                    resetForm();
                 })}>
                     <h2>Booking Details</h2>
                     <div>
