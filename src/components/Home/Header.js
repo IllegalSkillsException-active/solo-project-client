@@ -11,17 +11,15 @@ class Header extends React.Component {
                             <h1 className="site-title">NETTLE & SAGE</h1>
                             <div className="site-tagline">Essential Balance. Massage and Wellness.</div>
                         </div>
-
-
                     </div>
                 </header>
                 <nav className="main-nav">
                     <div className="container">
                         <ul>
-                            <li><Link to='/'>Home</Link></li>
-                            <li><Link to='/Appointments'>Appointments</Link></li>
-                            <li><Link to='/Offerings'>Offerings</Link></li>
-                            <li><Link to='/About'>About</Link></li>
+                            <li className = "siteNav"><Link to='/'>Home</Link></li>
+                            <li className = "siteNav"><Link to='/Appointments'>Appointments</Link></li>
+                            <li className = "siteNav"><Link to='/Offerings'>Offerings</Link></li>
+                            <li className = "siteNav"><Link to='/About'>About</Link></li>
                         </ul>
                     </div>
                 </nav>

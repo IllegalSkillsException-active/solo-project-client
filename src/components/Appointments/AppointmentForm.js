@@ -5,9 +5,17 @@ import dateFns from "date-fns";
 import { postAppointments, setCalendarVisibility } from '../../actions/appointments';
 import AppInputs from './appInputs';
 import Calendar from './calendar';
+import ConfirmationPage from './confirmationPage';
+import '../../styles/dropDowns.css';
 
 
 export class AppointmentForm extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            addConfirmation: false
+        }
+    }
 
     handleSubmit(data) {
         const newData = {
@@ -69,19 +77,27 @@ export class AppointmentForm extends React.Component {
         });
 
         const renderSelectedDate = () => {
-            return <input disabled={true} value={dateFns.format(this.props.date, 'MM/DD/YYYY')} type="text" onClick={() => {
+            return <input id='calendar' disabled={true} value={dateFns.format(this.props.date, 'MM/DD/YYYY')} type="text" onClick={() => {
                 this.handleCalendarToggle();
             }} />
         }
-        console.log(this.props); 
+        console.log(this.props);
+        
+        const toggleConfirmation = () => {
+            this.setState({addConfirmation: !this.state.addConfirmation})
+        }
+        console.log(this.state);
+
         return (
             <div className='input'>
                 <form onSubmit={this.props.handleSubmit(data => {
                     this.handleSubmit(data)
-                })}>
-                    <h2>Booking Details</h2>
+                    })
+                }
+                >
+                    <h2><b>Booking Details</b></h2>
                     <div>
-                        <label>Appointment Date</label>
+                        <label><b>Appointment Date</b></label>
                     </div>
                     <Field
                         name="appointmentDate"
@@ -95,7 +111,7 @@ export class AppointmentForm extends React.Component {
                     <Calendar />
 
                     <div>
-                        <label>First Name</label>
+                        <label><b>First Name</b></label>
                         <div>
                             <Field
                                 name="firstName"
@@ -105,7 +121,7 @@ export class AppointmentForm extends React.Component {
                         </div>
                     </div>
                     <div>
-                        <label>Last Name</label>
+                        <label><b>Last Name</b></label>
                         <div>
                             <Field
                                 name="lastName"
@@ -115,7 +131,7 @@ export class AppointmentForm extends React.Component {
                         </div>
                     </div>
                     <div>
-                        <label>Email</label>
+                        <label><b>Email</b></label>
                         <div>
                             <Field
                                 name="email"
@@ -125,7 +141,7 @@ export class AppointmentForm extends React.Component {
                         </div>
                     </div>
                     <div>
-                        <label>Phone Number</label>
+                        <label><b>Phone Number</b></label>
                         <div>
                             <Field
                                 name="phone"
@@ -134,78 +150,90 @@ export class AppointmentForm extends React.Component {
                             />
                         </div>
                     </div>
-                    <div>
-                        <label>Male</label>
-                        <div>
-                            <label>
+                        <label htmlFor='sex' style={{position: 'unset'}}><b>Male</b></label>
                                 <Field
                                     name="sex"
                                     component={AppInputs}
                                     type="radio"
-                                    value="male" />
+                                    value="male"
+                                    style={{display: 'inline-block'}}
+                                     />
                                 {' '}
-                                Female
-                        </label>
-                        </div>
+                        
                         <div>
-                            <label>
+                            <hr></hr>
+                        <label htmlFor='sex' style={{position: 'unset'}}><b>Female</b></label>
                                 <Field name="sex"
                                     component={AppInputs}
                                     type="radio"
                                     value="female" />
                                 {' '}
-                            </label>
                         </div>
-                    </div>
-                    <div className="appointmentTimes">
+                        <hr></hr>
+                    <div id="dropdown1" className="appointmentTimes">
                         <Field
                             name="time"
                             element="select"
                             component={AppInputs}
-                            label="Select Your Appointment Time"
+                            label={<b>Select Your Appointment Time</b>}
                         >
                             {options}
                         </Field>
                     </div>
-                    <div className="appointmentDurations">
+                    <hr></hr>
+                    <div id="dropdown2" className="appointmentDurations">
                         <Field
                             name="appointmentDuration"
                             element="select"
                             component={AppInputs}
-                            label="Select Your Appointment Duration"
+                            label={<b>Select Your Appointment Duration</b>}
                         >
                             {durationOptions}
                         </Field>
                     </div>
-                    <div className="typeOfMassage">
+                    <hr></hr>
+                    <div id="dropdown3" className="typeOfMassage">
+                    
                         <Field
                             name="massageType"
                             element="select"
                             component={AppInputs}
-                            label="Select The Type Of Massage You Would Like"
+                            label={<b>Select The Type Of Massage You Would Like</b>}
                         >
                             {massageOptions}
                         </Field>
                     </div>
+                    <hr></hr>
                     <div className="addOns">
-                        <label>Select The Add-Ons You Would Like To Enhance Your Massage:</label>
+                        <label><b>Select The Add-Ons You Would Like To Enhance Your Massage:</b></label>
                         <ul className="addOnsList">
                             {addOnOptions}
                         </ul>
                     </div>
+                    <hr></hr>
                     <div className='details-text'>
                         <Field
                             name='details'
                             type='textarea'
                             component={AppInputs}
-                            label='Give us more details about the reason for your appointment(optional)'
+                            label='Additional Details for your appointment (optional)'
                             element='textarea'
                         >
                         </Field>
                     </div>
                     <div className='submit'>
-                        <button type='submit'>Submit</button>
+                        <div className='submitButton' onClick={toggleConfirmation}>Submit</div>
                     </div>
+                {
+                this.state.addConfirmation && 
+                <ConfirmationPage 
+                confirm = {this.props.handleSubmit(data => {
+                    this.handleSubmit(data)
+                    })
+                }
+                toggle={toggleConfirmation}
+                /> 
+                }
                 </form>
             </div>
         )

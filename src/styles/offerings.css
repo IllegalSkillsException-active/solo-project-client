@@ -1,12 +1,47 @@
 .offerings {
     text-align: center;
-    font-size:6em;
-    margin:0 auto;
+    font-size:5em;
+	margin:0 auto;
+	display:block; 
+
 }
 
 .pricing {
-	max-width: 37.5em;
+	max-width: 44.7em;
 	margin: 0 auto;
 	margin-top: 0;
 	line-height: 1.5em;
+	list-style-position: inside;
+	font-weight: bold; 
+	color: #493718;
+	text-align: center;
+	/* border-left: 3px double floralwhite;
+	border-right: 3px double floralwhite; */
+}
+
+.pricing ul {
+	list-style-type: none;
+	border-bottom: double;
+	padding:0; 
+	padding-bottom: 5%; 
+	margin-top:5%; 
+}
+
+.pricing .standardPricing {
+	border-bottom: none;
+}
+
+.standardPricingFooter {
+	border-bottom: double;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+	li.addOn , li.lastAddOn {
+		font-size:2em;
+		margin-top:2%;
+	}
+	.addOnsDetail , .standardPricingFooter {
+		font-size: 2em; 
+		line-height: 1.4;
+	}
 }

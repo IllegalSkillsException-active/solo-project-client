@@ -7,8 +7,9 @@
   font-family: 'Material Icons', serif;
   font-style: normal;
   display: inline-block;
-  vertical-align: middle;
-  line-height: 1;
+  vertical-align: top;
+  line-height: 2.2;
+  width:2.85em;
   text-transform: none;
   letter-spacing: normal;
   word-wrap: normal;
@@ -37,10 +38,6 @@
   background-color: #E2C19C;
 }
 
-.input {
-  background-color: #E2C19C;
-}
-
 .logo{
   max-width:40px; 
   max-height:30px; 
@@ -62,6 +59,9 @@ and (max-device-width : 480px) {
     background:   #E2C19C;
     position: relative;
   }
+  .icon{
+    line-height: 2.2em;
+  }
 }
 @media only screen
 and (min-device-width : 768px)
@@ -74,6 +74,10 @@ and (max-device-width : 1024px) {
   color: var(--text-color);
   background:   #E2C19C;
   position: relative;
+  }
+  .icon{
+    line-height: 3.3em;
+    width: 3.3em;
   }
 }
 
@@ -88,6 +92,10 @@ and (min-width : 1224px) {
     background:   #E2C19C;
     position: relative;
     }
+    .icon{
+      line-height: 3.45em;
+      width: 3.45em;
+    }
 }
 
 @media only screen
@@ -101,8 +109,22 @@ and (min-width : 1824px) {
     background:   #E2C19C;
     position: relative;
     }
-}
+    
+    .icon{
+      line-height: 5.2em;
+      width: 4.2em;
+    }
 
+    label {
+      font-size:1.6em;
+    }
+    input#sex {
+      height:.9em;
+    }
+    .calendar {
+      width: 65%;
+    }
+}
 .appointmentsHeader {
   display: block;
   width: 100%;
@@ -124,7 +146,7 @@ and (min-width : 1824px) {
 
 main {
   display: block;
-  margin: 0 auto;
+  margin: auto;
   margin-top: 5em;
   max-width: 50em;
 }
@@ -172,7 +194,7 @@ main {
 .calendar {
   display: block;
   position: relative;
-  width: 60%;
+  width: 90%;
   background: var(--neutral-color);
   border: 1px solid var(--border-color);
 }
@@ -180,7 +202,7 @@ main {
 .calendar .header {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 115%;
+  font-size: 2em;
   padding: 1.5em 0;
   border-bottom: 1px solid var(--border-color);
 }
@@ -208,14 +230,14 @@ main {
   text-transform: uppercase;
   font-weight: 400;
   color: var(--text-color-light);
-  font-size: .8em;
+  font-size: 1.2em;
   padding: .75em 0;
   border-bottom: 1px solid var(--border-color);
 }
 
 .calendar .body .cell {
   position: relative;
-  height: 3em;
+  height: 5em;
   border-right: 1px solid var(--border-color);
   overflow: hidden;
   cursor: pointer;
@@ -248,7 +270,7 @@ main {
 
 .calendar .body .cell .number {
   position: absolute;
-  font-size: 1em;
+  font-size: 2em;
   line-height: 1;
   top: .75em;
   right: .75em;

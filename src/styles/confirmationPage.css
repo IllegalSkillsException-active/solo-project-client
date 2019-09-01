@@ -1,0 +1,85 @@
+.ButtonDiv {
+    display:flex;
+    justify-content: center;
+}
+
+#Buttons.add:hover{
+    background-color: #2aabe2;
+    color: #000;
+    cursor: pointer
+}
+
+#Buttons.cancel:hover {
+    background-color: #e2362a; 
+    color: #fff;
+    cursor: pointer
+}
+
+#Buttons {
+    background-color:#fff;
+    height: 25px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    border: 1px black solid;
+    margin-right: 10px;
+    border-radius: 4px;
+    padding: 12px;
+}
+
+.confirmationContainer {
+    height:100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirmDetails h3 {
+    text-align: center;
+    text-decoration-line: underline;
+}
+
+.modalDiv {
+    height:15%; 
+    width:55%; 
+    background-color: lightyellow;
+    border-radius: 1.5%; 
+    color:black
+}
+
+li.date, li.time, li.durration, li.massageType, li.addOns {
+    display:block;
+    font-size: 1.5em;
+    font-weight: 500;
+    padding:auto;
+    margin:10px;
+}
+.input form {
+    align-content: center; 
+  }
+
+@media only screen
+and (min-width : 1824px) {
+
+    #Buttons {
+        height:3em; 
+        font-size:1em; 
+        padding:1.29em; 
+        width:6em;
+        margin-bottom: 0%;
+    }
+
+    .ButtonDiv {
+        margin-top: 5%; 
+    }
+
+    .modalDiv {
+        height:20%; 
+    }
+}
+

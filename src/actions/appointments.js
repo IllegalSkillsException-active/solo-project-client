@@ -1,7 +1,6 @@
 import { API_BASE_URL } from '../config';
 import { SubmissionError } from 'redux-form';
 
-
 export const FETCH_APPOINTMENTS_BEGIN = 'FETCH_APPOINTMENTS_BEGIN';
 export const FETCH_APPOINTMENTS_SUCCESS = 'FETCH_APPOINTMENTS_SUCCESS';
 export const FETCH_APPOINTMENTS_FAILURE = 'FETCH_APPOINTMENTS_FAILURE';
@@ -12,6 +11,7 @@ export const POST_APPOINTMENTS_FAILURE = 'POST_APPOINTMENTS_FAILURE';
 export const SET_MONTH = 'SET_MONTH';
 export const SET_CALENDAR_VISIBILITY = 'SET_CALENDAR_VISIBILITY';
 export const SET_APPOINTMENT_DURATION = 'SET_APPOINTMENT_DURATION';
+export const SET_APPOINTMENT_ADDONS = 'SET_APPOINTMENT_ADDONS';
 
 export const fetchAppointmentsBegin = () => ({
     type: FETCH_APPOINTMENTS_BEGIN
@@ -63,6 +63,14 @@ export const postAppointmentsFailure = (err) => ({
     type: POST_APPOINTMENTS_FAILURE,
     err
 });
+
+export const setAppointmentAddOns = (addOns) => {
+    console.log(addOns);
+    return {
+    type: SET_APPOINTMENT_ADDONS,
+    addOns
+    }
+}
 
 // Handle HTTP errors since fetch won't.
 function handleErrors(response) {

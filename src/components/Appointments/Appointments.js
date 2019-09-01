@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { fetchAppointments } from '../../actions/appointments';
 
 import AppointmentForm from './AppointmentForm';
+import ConfirmationPage from './confirmationPage';
 import Header from '../Home/Header';
 
 class Appointment extends React.Component {
@@ -17,6 +18,7 @@ class Appointment extends React.Component {
         <Header />
         <main>
           <AppointmentForm />
+          {/* <ConfirmationPage /> */}
         </main>
       </div>
     );

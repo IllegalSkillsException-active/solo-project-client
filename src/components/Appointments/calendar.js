@@ -2,13 +2,16 @@ import React from "react";
 import dateFns from "date-fns";
 import { connect } from 'react-redux';
 import { fetchDatesBegin, fetchAppointments, setMonth } from '../../actions/appointments';
-
+import { setCalendarVisibility } from '../../actions/appointments';
 
 class Calendar extends React.Component {
   componentDidMount() {
     this.props.fetchAppointments();
   }
 
+  handleCalendarToggle(calendarIsVisible) {
+    setCalendarVisibility(calendarIsVisible);
+}
 
   renderHeader() {
     const dateFormat = "MMMM YYYY";
@@ -93,6 +96,7 @@ class Calendar extends React.Component {
 
   onDateClick = day => {
     this.props.fetchDatesBegin(day);
+    this.handleCalendarToggle(); 
   };
 
   nextMonth = () => {

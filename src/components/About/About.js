@@ -18,15 +18,15 @@ class About extends Component {
                 <div className="about">
                     <section className="about">
                         <h2>About Us</h2>
-                        <p>We are a home-based spa located in Holladay, Utah focused on offering quality bodywork, coaching sessions & holistic spa treatments at affordable rates.</p>
+                        <h3>We are a home-based spa located in Holladay, Utah focused on offering quality bodywork, coaching sessions & holistic spa treatments at affordable rates.</h3>
                         <p></p>
                     </section>
                     <section className="questions">
                         <h2>We Believe</h2>
                         <h3>Everyone Deserves Body Work</h3>
-                        <p>Nettle & Sage does not discriminate by income, sexual orientation, gender, age, or disability</p>
-                        <h3>Contact Us</h3>
-                        <p>About your specific needs or with any further questions you may have</p>
+                        <h3>Nettle & Sage does not discriminate by income, sexual orientation, gender, age, or disability</h3>
+                        <h2>Contact Us</h2>
+                        <h3>About your specific needs or with any further questions you may have</h3>
                     </section>
                 </div>
             </div>

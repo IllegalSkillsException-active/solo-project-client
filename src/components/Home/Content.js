@@ -13,57 +13,55 @@ class Content extends Component {
                 <section className="content">
                     <article className="post">
                         <div className="container">
-                            <h2>This is the super cool section title</h2>
+                            <h2 className="homeTitle">This is the super cool section title</h2>
                             <div className="columns">
                                 <div className="item">
                                     <h4 className="item-title">Sample title</h4>
                                     <img src={banner3} className="item-image" alt="herbs on a table" />
-                                    <p>Sample Paragraph</p>
+                                    <h4 className = "homeParagraph">Sample Paragraph</h4>
                                 </div>
 
                                 <div className="item">
                                     <h4 className="item-title">Sample title</h4>
-                                    <p>Sample Paragraph</p>
                                     <img src={banner1} className="item-image" alt="relaxing candles" />
+                                    <h4 className = "homeParagraph">Sample Paragraph</h4>
                                 </div>
                             </div>
                         </div>
                     </article>
                     <div className="full-bleed cool-photo2"></div>
                     <article className="post">
-                        <div className="container">
-                            <h3>Recent Blog Posts</h3>
-                            <div className="columns thirds">
-                                <div className="item"> <h4 className="item-title">Sample title</h4>
+                        <div className="blogContainer">
+                            <h3 className="blogTitle">Recent Blog Posts</h3>
+                            <div className="thirds">
+                                <div className="blogItem"> <h4 className="item-title">Sample title</h4>
                                     {/* <img src="http://lorempixel.com/400/100/nature" className="item-image" /> */}
-                                    <p>Sample Paragraph</p>
-                                    <p>Sample Paragraph</p>
+                                    <h4 className = "blogParagraph">Sample Paragraph</h4>
                                 </div>
-                                <div className="item">
+                                <div className="blogItem">
                                     <h4 className="item-title">Sample title</h4>
-                                    <p>Sample Paragraph</p>
+                                    <h4 className = "blogParagraph">Sample Paragraph</h4>
                                     <p>
                                         {/* <img src="http://lorempixel.com/400/100/cats" className="item-image" /> */}
                                     </p>
                                 </div>
-                                <div className="item">
+                                <div className="blogItem">
                                     <h4 className="item-title">Sample title</h4>
                                     {/* <img src="http://lorempixel.com/400/100/fashion" className="item-image" /> */}
-                                    <p>Sample Paragraph</p>
+                                    <h4 className = "blogParagraph">Sample Paragraph</h4>
                                 </div>
-                                <div className="item">
+                                <div className="blogItem">
                                     <h4 className="item-title">Sample title</h4>
-                                    <p>Sample Paragraph</p>
+                                    <h4 className = "blogParagraph">Sample Paragraph</h4>
                                 </div>
-                                <div className="item">
+                                <div className="blogItem">
                                     <h4 className="item-title">Sample title</h4>
                                     {/* <img src="http://lorempixel.com/400/100/nightlife" className="item-image" /> */}
-                                    <p>Sample Paragraph</p>
-                                    <p>Sample Paragraph</p>
+                                    <h4 className = "blogParagraph">Sample Paragraph</h4>
                                 </div>
-                                <div className="item">
+                                <div className="blogItem">
                                     <h4 className="item-title">Sample title</h4>
-                                    <p>Sample Paragraph</p>
+                                    <h4 className = "blogParagraph">Sample Paragraph</h4>
                                 </div>
                             </div>
                         </div>

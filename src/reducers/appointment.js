@@ -9,7 +9,8 @@ import {
     POST_APPOINTMENTS_FAILURE,
     SET_MONTH,
     SET_CALENDAR_VISIBILITY,
-    SET_APPOINTMENT_DURATION
+    SET_APPOINTMENT_DURATION, 
+    SET_APPOINTMENT_ADDONS
 } from '../actions/appointments';
 
 const initialState = {
@@ -18,8 +19,8 @@ const initialState = {
     selectedDate: new Date(),
     loading: false,
     calendarIsVisible: false,
-    error: null
-
+    error: null, 
+    appointmentAddOns: []
 };
 
 
@@ -97,6 +98,13 @@ export default function appointmentReducer(state = initialState, action) {
                 loading: false,
                 error: action.err
             };
+            
+        case SET_APPOINTMENT_ADDONS:
+        console.log(action.addOns);
+            return {
+                ...state, 
+                appointmentAddOns:action.addOns
+            }
         default:
             // ALWAYS have a default case in a reducer
             return state;
