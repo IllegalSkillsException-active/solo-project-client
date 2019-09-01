@@ -360,6 +360,9 @@ color: #493718;
     margin-top:1em;
     color: white;
   }
+  .addOnsList {
+    padding-left: 0;
+  }
 }
 
 
